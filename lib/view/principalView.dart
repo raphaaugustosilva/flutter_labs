@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_labs/view/criptografia/criptografiaView.dart';
 import 'package:flutter_labs/view/overlay/overlayPrincipalView.dart';
 
 class PrincipalView extends StatefulWidget {
@@ -22,9 +23,11 @@ class _PrincipalViewState extends State<PrincipalView> {
             children: <Widget>[
               RaisedButton(
                 child: Text("Overlay"),
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => OverlayPrincipalView()));
-                },
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => OverlayPrincipalView())),
+              ),
+              RaisedButton(
+                child: Text("Criptografia"),
+                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => CriptografiaView())),
               ),
             ],
           ),
